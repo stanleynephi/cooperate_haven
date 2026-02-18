@@ -1,6 +1,5 @@
 /**import the packagecard function and pass the package list */
 import { PackageCard } from "./packagecard"
-import Link from "next/link"
 
 function PackageSection() {
   const packages = [
@@ -41,13 +40,9 @@ function PackageSection() {
   return (
     <div className="flex flex-wrap justify-center gap-3 p-7">
       {packages.map((pkg, idx) => (
-        <Link
-          key={idx}
-          href="/clothes"
-          className="flex-1 min-w-[280px] max-w-[400px] transition-transform hover:scale-105 cursor-pointer"
-        >
+        <div key={idx} className="flex-1 min-w-[280px] max-w-[400px]">
           <PackageCard {...pkg} />
-        </Link>
+        </div>
       ))}
     </div>
   )

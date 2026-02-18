@@ -16,6 +16,11 @@ const nextConfig: NextConfig = {
         hostname: "picsum.photos",
         pathname: "/**", // optional: if using Lorem Picsum placeholders
       },
+      {
+        protocol: "https",
+        hostname: "images.pexels.com",
+        pathname: "/**", // allow all paths from Unsplash
+      },
     ],
   },
 }
