@@ -13,7 +13,6 @@ const brands = [
 
 // 🔥 duplicate the array
 const loopBrands = [...brands, ...brands]
-console.log(loopBrands)
 
 export default function BrandCarousel() {
   const [emblaRef] = useEmblaCarousel(

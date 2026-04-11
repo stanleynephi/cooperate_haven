@@ -7,11 +7,33 @@ export interface PackageCardProp {
 
 //defintion for the avaiable products
 export interface ClothingCardProp {
-  id: string
-  name: string
+  id: number
+  product_name: string
   category: string
   price: number
   currency: string
-  image: string
-  inStock: boolean
+  image_url: string
+  instock: boolean
+  category_id: string
+}
+
+export interface ClotheCategories {
+  id: number
+  name: string
+  slug: string
+}
+
+//definition for products
+export interface Product {
+  id: string
+  product_name: string
+  currency: string
+  price: string
+  image_url: string
+  description: string
+  instock: boolean
+}
+
+export interface Quantity {
+  quantity: number
 }

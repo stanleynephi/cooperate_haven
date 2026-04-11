@@ -2,6 +2,7 @@
  * fetch the list of available products and create cards for it.
  */
 
+// import { Products } from "@/app/lib/products"
 import { Products } from "@/app/lib/products"
 import ClothingCard from "./productcard"
 import Link from "next/link"
@@ -14,7 +15,7 @@ export default function FeaturedProducts() {
         Featured Products
       </h1>
       <div className="bg-[#25287A] flex flex-wrap justify-center gap-10 p-4 h-full">
-        {Products.map((product, index) => (
+        {Products.slice(1, 3).map((product, index) => (
           <Link
             href="/clothes"
             key={index}
