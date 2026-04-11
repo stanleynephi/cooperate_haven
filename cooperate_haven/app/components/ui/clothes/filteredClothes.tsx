@@ -5,8 +5,8 @@ export default async function FilteredClothes({
   category,
   currentPage,
 }: {
+  category: string | unknown
   currentPage: number
-  category: string
   stock?: string
   price?: string
 }) {

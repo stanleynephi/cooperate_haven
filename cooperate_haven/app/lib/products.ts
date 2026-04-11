@@ -13,11 +13,11 @@ export const Products = [
   },
   {
     id: 2,
-    name: "Navy Blue Suit",
+    product_name: "Navy Blue Suit",
     category: "Suits",
     price: 219.99,
     currency: "GHS",
-    image: "/images/suits/navy-suit.jpg",
+    image_url: "/images/suits/navy-suit.jpg",
     description: "Professional navy suit with slim fit design",
     inStock: true,
   },

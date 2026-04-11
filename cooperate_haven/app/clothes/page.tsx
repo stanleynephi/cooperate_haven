@@ -6,7 +6,7 @@ import { getClothesCounts } from "../lib/data"
 export default async function Page(prop: {
   searchParams?: Promise<{
     page?: string
-    category?: string
+    category?: string | never
     stock?: string
     price?: string
   }>
@@ -26,9 +26,9 @@ export default async function Page(prop: {
         <div className="md:col-span-1">
           <FilterPanel
             searchParams={searchParams}
-            category={searchParams?.category}
-            inStockOnly={searchParams?.stock}
-            maxPrice={searchParams?.price}
+            // category={searchParams?.category}
+            // inStockOnly={searchParams?.stock}
+            // maxPrice={searchParams?.price}
           />
         </div>
 
@@ -37,8 +37,8 @@ export default async function Page(prop: {
           {/* Products */}
           <div className="bg-white p-4 rounded-2xl shadow-sm">
             <FilteredClothes
-              currentPage={currentPage}
               category={current_Category}
+              currentPage={currentPage}
             />
           </div>
 

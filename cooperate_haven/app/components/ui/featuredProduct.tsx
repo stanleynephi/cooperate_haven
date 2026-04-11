@@ -21,7 +21,7 @@ export default function FeaturedProducts() {
             key={index}
             className="flex-[1_1_100%] sm:flex-[1_1_48%] md:flex-[1_1_31%] lg:flex-[1_1_23%]"
           >
-            <ClothingCard {...product} />
+            <ClothingCard {...(product as any)} />
           </Link>
         ))}
       </div>
