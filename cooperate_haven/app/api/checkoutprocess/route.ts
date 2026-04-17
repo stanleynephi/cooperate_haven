@@ -1,11 +1,23 @@
-/**checkout function is exported and takes the products id from the cart and the quantities and then the total price */
-/**get all the products name and the quantities */
-export function CheckOutProcess(cartdetails: any, totalprice: number) {
-  /**get the data from the cart */
+import { NextResponse } from "next/server"
+
+/**http post nethod to get form and cart data */
+export async function POST(req: Request) {
+  const body = await req.json()
+
   const order = {
-    items: cartdetails,
-    totalprice,
+    item: body.items,
+    prices: body.price,
+    form: body.customer,
   }
 
-  console.log("This is your order", order)
+  console.log("This is the order basket", order)
+
+  return NextResponse.json(
+    {
+      success: true,
+      message: "order created",
+      redirectUrl: "/",
+    },
+    { status: 200 },
+  )
 }
